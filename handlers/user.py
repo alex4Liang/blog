@@ -12,5 +12,4 @@ class UsersHandler(BaseHandler):
         user = User.add_user(
                 self.body.get('username', ''), self.body.get('password', '')
         )
-        user['_id'] = str(user['_id'])
         self.write(user)

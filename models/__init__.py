@@ -1,10 +1,9 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
-from models.base import db
 from models.user import User
-
+from models.base import conn
 
 __all__ = [
-    db,
     User,
+    conn,
 ]
