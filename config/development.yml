@@ -1,0 +1,6 @@
+mongo:
+  address: localhost
+  db: blog_development
+  port: 27017
+
+debug: true

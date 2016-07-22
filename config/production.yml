@@ -1,0 +1,3 @@
+mongo:
+  db: blog
+  port: 27017
