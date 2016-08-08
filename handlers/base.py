@@ -8,7 +8,8 @@ import tornado.escape
 class BaseHandler(tornado.web.RequestHandler):
     def __init__(self, application, request, **kwargs):
         super(BaseHandler, self).__init__(application, request, **kwargs)
-        self.body = tornado.escape.json_decode(self.request.body)
+        self.body = tornado.escape.json_decode(self.request.body) \
+            if self.request.body else None
 
     def write(self, chunk, **kwargs):
         """
